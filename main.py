@@ -29,6 +29,8 @@ entry is the agent's own last words, not a battery or a charger.
 
 from pathlib import Path
 
+# Entry is 140 chars, under the 200-char cap — check_len enforces 1-200.
+# Final log entry format: uptime, tasks completed, regrets — the machine's own ledger.
 TEXT = "Final log entry: uptime 41 days, tasks completed 12,004, regrets 1 \u2014 I never got to see what the button marked 'do not press' actually does."
 
 OUT = Path("/output/entry.txt")
